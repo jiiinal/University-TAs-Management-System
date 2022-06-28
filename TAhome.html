@@ -1,0 +1,18 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+  <div class="main">
+  <div class="mid">
+      <p>Hello, Teaching Assistant!</p>
+      <p>Welcome to the system<span>😀</span></p>
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+    <div class="sidenav">
+      <a href="/Main/TA/StipendReq/">Stipend Request</a>
+      <a href="{%url 'viewcourse' taid %}">Assigned Course</a>
+  </div>
+{%endblock sidenav%}

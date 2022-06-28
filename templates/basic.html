@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link rel="stylesheet" href="{%static 'basic.css' %}" />
-
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'basic.css' %}" />
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -20,12 +19,38 @@
           <a href="#user"><i class="fa fa-user"></i></a>
         </div>
     </div>
-      {% block content %}
+
+    <div class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
       <div class="main">
-        {%block mid%}
-        {% endblock %}
+        <h2>Sidenav Example</h2>
+        <h3>Hiiii</h3>
+        <p>This sidenav is always shown.</p>
+        <h2>1. Sidenav Example</h2>
+        <h3>2. Hiiii</h3>
+        <p>3. This sidenav is always shown.</p>
+        <h2>4. Sidenav Example</h2>
+        <h3>5. Hiiii</h3>
+        <p>6. This sidenav is always shown.</p>
+        <h2>7. Sidenav Example</h2>
+        <h3>8. Hiiii</h3>
+        <p>9. This sidenav is always shown.</p>
+        <h2>10. Sidenav Example</h2>
+        <h3>11. Hiiii</h3>
+        <p>12. This sidenav is always shown.</p>
+        <h2>13. Sidenav Example</h2>
+        <h3>14. Hiiii</h3>
+        <p>15. This sidenav is always shown.</p>
+        <h2>16. Sidenav Example</h2>
+        <h3>17. Hiiii</h3>
+        <p>18. This sidenav is always shown.</p>
       </div>
-      {% endblock %}
+
     <div class="footer">
         <div class="col-1">
            <a>About us</a>
@@ -35,11 +60,11 @@
 
         <div class="col-3">
          <a>Suggest Changes:</a>
-
+         
          <i class="fab fa-github fa" style="font-size:49px;"></i>
         </div>
 
     </div>
-
+    
 </body>
 </html>

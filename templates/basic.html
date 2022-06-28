@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
+    <title></title>
     <link rel="stylesheet" href="{%static 'basic.css' %}" />
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -19,16 +20,23 @@
           <a href="#user"><i class="fa fa-user"></i></a>
         </div>
     </div>
-
+      {% block content %}
+      <div class="main">
+        {%block mid%}
+        {% endblock %}
+      </div>
+      {% endblock %}
     <div class="footer">
         <div class="col-1">
-           <h3> About us</h3>
+           <a>About us</a>
         </div>
 
-         <div class="col-2"></div>
+        <div class="col-2"></div>
 
         <div class="col-3">
-         <h3>Suggest Changes: <i class="fab fa-github fa" style="font-size:36px;"></i></h3>
+         <a>Suggest Changes:</a>
+
+         <i class="fab fa-github fa" style="font-size:49px;"></i>
         </div>
 
     </div>

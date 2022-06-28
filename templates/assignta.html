@@ -1,0 +1,58 @@
+{%extends 'basic.html' %}
+{%load static%}
+{%block content%}
+
+<style>
+.body
+{
+      display:flex;
+      align : center;
+        width: 50%;
+        margin: auto;
+        padding: 5px;
+        margin-top : 70px;
+        margin-bottom : 70px;
+        background-image: linear-gradient(to left, #717857, #B78787);
+        border : 2px solid black;
+        overflow:auto;
+        border-radius: 4px;
+}
+
+input, select {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.format{
+  display:flex;
+  flex-direction:column;
+  overflow:auto;
+  align-items:center;
+  margin:auto;
+}
+
+button[type=submit] {
+  width: 30%;
+  background-color: #ABFF50;
+  color: black;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+<div class="body">
+
+<form action="" method="POST" enctype="multipart/form-data" class="format" >
+      {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="assign" value="submit" >Assign</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{%extends 'basic.html' %}
+{%load static%}
+{%block content%}
+<style>
+button[type=button]
+{
+  align:right;
+}
+
+</style>
+
+    <div class="sidenav">
+      <a href="{% url 'cohome' %}">Home</a>
+        <a href="{% url 'addstudent' %}">Add Student</a>
+
+    </div>
+
+    <div class="main">
+      {% for data in dataset %}
+        {{ data.sid }}<br>
+        {{ data.name }}<br>
+        <a href="{% url 'updatestudent' data.id %}">Update</a>
+        <a href="{% url 'deletestudent' data.id %}">Delete</a>
+          <hr/>
+      {% endfor %}
+
+    </div>
+
+
+
+
+
+</html>
+{%endblock%}

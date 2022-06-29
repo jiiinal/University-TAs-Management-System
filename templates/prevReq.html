@@ -1,0 +1,42 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<style>
+.mid ol {
+  font-size: large;
+  color: white;
+  width: 100%;
+}
+
+.text{
+  display: inline-block;
+}
+.h3{
+  display: inline-block;
+  text-decoration: underline;
+  font-size: larger;
+  color: rgb(173, 232, 212);
+}
+</style>
+  <div class="main">
+  <div class="mid">
+    <p>{{message}}</p>
+    <ol>
+      {% for req in reqs%}
+      <li>
+        <div class="text"> You have sent request to <div class="h3">'{{req.FacultyObj.name}}'</div> for <div class="h3">'{{req.Month}}'</div> month and the request status is: <div class="h3">{{req.status}}</div>.
+        </div>
+      </li>
+      {%endfor%}
+    </ol>
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+<div class="sidenav">
+  <a class="active" href="">See previous requests</a>
+  <a href="{%url 'TAhome' taid%}">Home</a>
+</div>
+{%endblock sidenav%}

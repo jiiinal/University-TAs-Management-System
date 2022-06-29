@@ -1,0 +1,33 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<style>
+.mid ul {
+    font-size: medium;
+    color: white;
+}
+</style>
+  <div class="main">
+  <div class="mid">
+      <p>{{message}}</p>
+<ul>
+    <li> Name: {{user.name}} </li>
+    <li> Course: {{viewCourse.name}} [{{user.cid}}] </li>
+    <li> Year: {{user.year}} </li>
+    <li> Status: {{user.status}} </li>
+    <li> Stars: {{user.star}} </li>
+    <li> Faculty's name: {{fac.name}}</li>
+</ul>
+
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+    
+<div class="sidenav">
+  <a class="active" href="#">Assigned Course</a>
+  <a href="{%url 'TAhome' user.id%}">Home</a>
+</div>
+{%endblock sidenav%}

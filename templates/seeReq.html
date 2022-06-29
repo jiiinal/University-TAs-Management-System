@@ -1,0 +1,46 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<style>
+  .mid ol {
+    font-size: large;
+    color: white;
+    width: 100%;
+  }
+  
+  .text{
+    display: inline-block;
+  }
+  .h3{
+    display: inline-block;
+    text-decoration: underline;
+    font-size: larger;
+    color: rgb(173, 232, 212);
+  }
+</style>
+
+<div class="main">
+  <div class="mid">
+<p>You can approve or disapprove any request from here.</p>
+      <ol>
+        {% for req in reqs%}
+        <li>
+          <div class="text">Got payment request from <div class="h3">'{{req.TAObj.name}}'</div> for <div class="h3">'{{req.Month}}'</div> month and the request status is: <div class="h3">{{req.status}}.</div></div>
+          <div>with message: {{req.message}}</div>
+          
+        </li>
+        {%endfor%}
+      </ol>
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+
+    <div class="sidenav">
+      <a class="active" href="">See Stipend Request</a>
+      <a href="{% url 'facultyHome' facid %}">Home</a>
+  </div>
+
+{%endblock sidenav%}

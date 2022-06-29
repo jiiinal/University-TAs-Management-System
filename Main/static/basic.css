@@ -1,0 +1,114 @@
+body{
+    margin:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.topnav {
+    top: 0;
+    width: 100%;
+    padding: 5px 1%;
+    display: flex;
+    background-image: linear-gradient(to right, #add8e6, #3CB371);
+    position: fixed;
+    overflow: hidden;
+    height: 60px;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 19px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.topnav-right {
+    float: right;
+}
+
+.topnav-right :hover {
+    background-color: #ddd;
+    color: black;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.footer{
+    height: 80px;
+    width: 100%;
+    padding: 5px 15%;
+    background-image: linear-gradient(to right, #add8e6, #3CB371);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.col-1 a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 19px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.col-2{
+      flex-grow: 500;
+}
+
+.col-3 a {
+    float: left;
+    color: #black;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.col-3 i{
+    font-size: 21px;
+    text-align: center;
+    width: 50px;
+}
+
+.col-3 i:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sidenav {
+    width: 150px;
+    position: fixed;
+    top: 60px;
+    background-color: #333;
+    overflow: auto;
+    padding-top: 10px;
+    bottom: 80px;
+}
+
+.sidenav a {
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 150px; /* Same as the width of the sidenav */
+    width: 100%;
+    position: fixed;
+    background-color: rgba(171, 92, 52, 0.747);
+    overflow: auto;
+    top: 60px;
+    bottom: 80px;
+}

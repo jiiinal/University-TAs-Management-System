@@ -1,0 +1,24 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<div class="main">
+  <div class="mid">
+      <p>
+          {% for data in seeList %}
+      {{data.name}}
+          <br>
+          {% endfor %}
+      </p>
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+
+    <div class="sidenav">
+        <a class="active" href="">See the list of TAs</a>
+        <a href="{% url 'facultyHome' facid%}">Home</a>
+  </div>
+
+{%endblock sidenav%}

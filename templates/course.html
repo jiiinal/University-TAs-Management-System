@@ -1,0 +1,43 @@
+{%extends 'basic.html' %}
+{%load static%}
+{%block content%}
+<style>
+button[type=button]
+{
+  align:right;
+}
+.notify{
+  margin: auto;
+  padding: 20px;
+}
+
+</style>
+
+    <div class="sidenav">
+       <a href="{% url 'cohome' %}">Home</a>
+        <a href="{% url 'addcourse' %}">Add Course</a>
+
+    </div>
+
+    <div class="main">
+      <div class="notify">
+
+        {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+        {% if message.tags %} {{message }} {% endif %}
+        {% endfor %}
+        </ul>
+        {% endif %}
+
+      </div>
+      {% for data in dataset %}
+        {{ data.courseid }}<br>
+        <a href="{% url 'updatecourse' data.courseid %}">Update</a>
+        <a href="{% url 'deletecourse' data.courseid %}">Delete</a>
+          <hr/>
+      {% endfor %}
+
+    </div>
+
+{%endblock%}

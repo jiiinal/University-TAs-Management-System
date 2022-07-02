@@ -1,0 +1,37 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<div class="main">
+  <div class="mid">
+  <div class="container">  
+    <p>
+      <h1> List of TAs </h1>
+    </p>  
+    {% for data in seeList%}
+    {%if data.status == 'Not Assigned'%}
+            <strong>{{data.name}} </strong>
+            <ul>
+            <li> EmailID: {{data.mail}} </li>
+            <li> Stars: {{data.star}} </li>
+            <li> Status: {{data.status}} </li>
+            </ul>
+            <br/>
+    {% endif %}        
+    {%endfor%}
+  </div>
+  </div>
+</div>
+{%endblock mid%}
+
+
+{%block sidenav%}
+  <div class="sidenav">
+    <a class="active" href="">Available TAs</a>
+    <a href="{% url 'facultyHome' facid %}">Home</a>
+</div>
+
+{%endblock sidenav%}
+
+
+

@@ -1,0 +1,93 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+<style>
+  .mid ol{
+    font-size: large;
+    color: white;
+    width: 100%;
+  }
+  .text{
+    display: inline-block;
+  }
+  .h3{
+    display: inline-block;
+    text-decoration: underline;
+    font-size: larger;
+    color: rgb(205, 255, 239);
+  }
+  .form-group{
+    color:black;
+    display: inline-block;
+  }
+</style>
+
+<div class="main">
+  <div class="mid">
+<p>You can approve or disapprove any request from here.</p>
+      <ol>
+        {% for req in reqs%}
+        <li>
+          <div class="text">Got payment request from <div class="h3">'{{req.TAObj.name}}'</div> for <div class="h3">'{{req.Month}}'</div> month and the request status is: <div class="h3">{{req.status}}.</div></div>
+          <div style="display: inline-block;"> with message: {{req.message}}</div>
+          <form method="POST" action="{% url 'seePendingRequests' facid%}">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="status" style="font: weight 8px; color: rgb(0, 255, 166);">action:</label>
+                <select id="status" name="status">
+                  <option value="Approved" style="text-align: center;">approve</option>
+                  <option value="Disapproved" style="text-align: center;">disapprove</option>
+                </select>
+              <div class="form-group">
+                <select type="integer" id="reqId" name="reqId">
+                  <option value={{req.id}}>{{req.id}}</option>
+                </select>
+              </div>
+              <button class="btn" type="submit" value="submit">Done</button>
+          </form>
+        </li>
+        {%endfor%}
+      </ol>
+  </div>
+</div>
+{%endblock mid%}
+
+{%block sidenav%}
+    <div class="sidenav">
+      <a class="active" href="">Pending Stipend Request</a>
+      <a href="{% url 'facultyHome' facid %}">Home</a>
+  </div>
+
+{%endblock sidenav%}
+<!--view.py-->
+<!--
+obj = faculty.objects.get(id=id)
+    reqs = stipendRequest.objects.filter(FacultyObj = obj, status= 'Not approved yet')
+    #reqs = stipendRequest.objects.filter(FacultyObj = obj | status= 'Not Approved yet')
+    context = {'facid':obj.id, 'reqs':reqs}
+    if request.method=="POST":
+        month = request.POST.get('month')
+        TA = request.POST.get('TAObj')
+        user = ta.objects.get(mail=TA.mail)
+        StiRequest = reqs.get(TAObj = user.id, Month=month)
+        StiRequest.status = "Approved"
+        StiRequest.save()
+        return render(request, 'seePendingReq.html', context)
+    return render(request, 'seePendingReq.html', context)
+-->
+<!--html changes-->
+<!--
+<div class="form-group">
+  <label for="TAObj"></label>
+  <select type="text" id="TAObj" name="TAObj">
+    <option value={{req.TAObj.mail}}>{{req.TAObj}}</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="month"></label>
+  <select type="text" id="month" name="month">
+    <option value={{req.Month}}>{{req.Month}}</option>
+  </select>
+</div>
+-->

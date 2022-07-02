@@ -1,0 +1,58 @@
+{% extends 'basic.html' %}
+{% load static %}
+{%block content%}
+<style>
+  .main {
+      margin-left: 150px; /* Same as the width of the sidenav */
+      width: 100%;
+      position: fixed;
+      background-color: rgba(171, 92, 52, 0.747);
+      overflow: auto;
+      top: 60px;
+      bottom: 80px;
+      padding-inline-start: 0%;
+      padding-inline-end: 0%;
+  }
+
+  .mid{
+    width: 86%;
+    background-image: linear-gradient(to left, #F7F8F8, #ACBB78);
+    top: 60px;
+    bottom: 80px;
+    float: center;
+    display: block;
+    overflow: auto;
+    margin-top: 30px;
+    margin-left: 1.5%;
+    height: auto;
+  }
+
+  .mid p{
+    font-size:xx-large;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+  }
+</style>
+    <div class="sidenav">
+        <a href="{% url 'gocourse' %}">Course</a>
+        <a href="{% url 'gostudent' %}">Student</a>
+        <a href="{% url 'gota' %}">TA</a>
+        <a href="{% url 'gofaculty' %}">Faculty</a>
+        <a href="{% url 'declare'%}">Announcement</a>
+    </div>
+
+    {% block mid %}
+  <div class="main">
+
+  <div class="mid">
+      <p>Welcome !!<span>😀</span></p>
+  </div>
+
+</div>
+{%endblock mid%}
+</html>
+
+
+
+{% endblock %}

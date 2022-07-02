@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'basic.css' %}" />
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+    <div class="topnav">
+        <a>TAs Management System</a>
+        <div class="col-2"></div>
+        <div class="topnav-right">
+          <a href="#user"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+
+    <div class="sidenav">
+
+    </div>
+
+
+    {% block content %}
+      {%block mid%}
+      {% endblock %}
+    </div>
+    {% endblock %}
+
+    <div class="footer">
+        <div class="col-1">
+           <a>About us</a>
+        </div>
+
+        <div class="col-2"></div>
+
+        <div class="col-3">
+         <a>Suggest Changes:</a>
+
+         <i class="fab fa-github fa" style="font-size:49px;"></i>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+
+{% load static %}
+{% block mid %}
+
+  <div class="main">
+  <div class="mid">
+      <p>Login Successful.</p>
+      <p>Welcome to the system!</p>
+  </div>
+  </div>
+
+{% endblock mid %}
+
+{%block sidenav%}
+<div class="sidenav">
+  <a href="{% url 'seePendingRequests' facid %}">Pending Stipend Request</a>
+  <a href="{% url 'seeApprovedRequests' facid %}">Approved Stipend Request</a>
+  <a href="{% url 'assignedCourse' facid%}">Assigned Course</a>
+  <a href="{% url 'submitPref' facid%}">Submit Preference</a>
+  <a href="{% url 'seeList' facid%}">See available TAs</a>
+</div>
+{%endblock sidenav%}

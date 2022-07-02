@@ -1,0 +1,41 @@
+{% extends 'header.html' %}
+
+{% load static %}
+<style>
+.notify{
+  margin: auto;
+  padding: 20px;
+}
+
+</style>
+{% block mid %}
+  <div class="main">
+    <div class="notify">
+
+      {% if messages %}
+      <ul class="messages">
+      {% for message in messages %}
+      {% if message.tags %} {{message }} {% endif %}
+      {% endfor %}
+      </ul>
+      {% endif %}
+
+    </div>
+  <div class="mid">
+      <p>Hello, Teaching Assistant!</p>
+      <p>Welcome to the system<span>😀</span></p>
+      <p style="color:white;">{{message}}</p>
+  </div>
+</div>
+{%endblock mid%}
+
+
+{%block sidenav%}
+
+<div class="sidenav">
+  <a href="{%url 'StiReq' taid %}">Stipend Request</a>
+  <a href="{%url 'viewcourse' taid%}">Assigned Course</a>
+  <a href="{%url 'PrevReq' taid%}">See previous requests</a>
+</div>
+
+{%endblock sidenav%}

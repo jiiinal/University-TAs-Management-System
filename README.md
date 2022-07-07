@@ -1,1 +1,1 @@
-# University TAs Management System
+# University TAs Management System (UTAMS)

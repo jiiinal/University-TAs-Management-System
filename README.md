@@ -1,1 +1,1 @@
-# TA-manangement-system
+# University TAs Management System

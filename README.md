@@ -1,5 +1,7 @@
 # University-TAs-manangement-system (UTAMS)
 
+updated repo link: https://github.com/jiiinal/University-TAs-management-system-final
+
 To run this project on your localhost you should have python and Django setup installed. Then run below commands. <br>
 -python manage.py makemigrations <br>
 -python manage.py migrate <br>

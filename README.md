@@ -22,9 +22,9 @@ Faculty Functionalities: <br/>
 * Faculty can register themselves on the system. <br/>
 * Faculty can login into the system. <br/>
 * Faculty can approve/approve with condition/disapprove the Stipend request of the TA. <br/>
-* Faculty will be able to see previously approved/disapproved requests of the TA for the stipend. <br/>
+* Faculty can see previously approved/disapproved requests of the TA for the stipend. <br/>
 * Faculty can see the available list of TAs. <br/>
-* Faculty give preference to TAs for their course. <br/>
+* Faculty can give preference to TAs for their course. <br/>
 * Faculty can logout from the system.<br/>
 
 TAs Functionalities: <br/>

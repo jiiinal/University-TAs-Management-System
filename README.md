@@ -1,4 +1,4 @@
-# University-TAs-management-system (UTAMS)
+# University-TAs-Management-System (UTAMS)
 
 updated repo link: https://github.com/jiiinal/University-TAs-management-system-final
 

@@ -10,13 +10,13 @@ To run this project on your localhost you should have python and Django setup in
   <br>
  # Project Functionalities: <br/>
 Co-ordinator Functionalities:  <br/>
-* Co-ordinator is able to login & logout of system. <br/>
-* Co-ordinator is able to add/update/remove faculty and TAs. <br/>
-* Co-ordinator is able to add/update/remove Courses and students. <br/>
-* Co-ordinator is able to set the upper threshold number of TAs that any course can have. <br/>
-* Co-ordinator is able to assign TAs and also based on preference of professors. <br/>
-* Co-ordinator is able to update the list of TAs given to any faculty. <br/>
-* Co-ordinator is able to send a message to TA and faculty that all the processes are completed.
+* Co-ordinator can login & logout of system. <br/>
+* Co-ordinator can add/update/remove faculty and TAs. <br/>
+* Co-ordinator can add/update/remove Courses and students. <br/>
+* Co-ordinator can set the upper threshold number of TAs that any course can have. <br/>
+* Co-ordinator can assign TAs and also based on preference of professors. <br/>
+* Co-ordinator can update the list of TAs given to any faculty. <br/>
+* Co-ordinator can send a message to TA and faculty that all the processes are completed.
 
 Faculty Functionalities: <br/>
 * Faculty can register themselves on the system. <br/>
@@ -30,13 +30,13 @@ Faculty Functionalities: <br/>
 TAs Functionalities: <br/>
 * TAs can register themselves on the system.<br/>
 * TAs will be able to login & logout of system.<br/>
-* TAs is able to send a ‘Stipend request’ to their respective faculty.<br/>
-* TAs is able to see the status of their previous ‘Stipend request.’<br/>
-* TAs is able to see which professors they are assigned to.<br/>
+* TAs can send a ‘Stipend request’ to their respective faculty.<br/>
+* TAs can see the status of their previous ‘Stipend request.’<br/>
+* TAs can see which professors they are assigned to.<br/>
 
 Students Functionalities: <br>
-* Students is able to login & logout of system. <br/>
-* Students is able to provide feedback to the TA at the end of the semester.
+* Students can login & logout of system. <br/>
+* Students can provide feedback to the TA at the end of the semester.
 <br/>
 
 # HomePage: <br/>
